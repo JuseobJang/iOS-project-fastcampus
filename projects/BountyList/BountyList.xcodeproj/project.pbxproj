@@ -13,6 +13,7 @@
 		8B89F72826935ABE008ADC64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B89F72726935ABE008ADC64 /* Assets.xcassets */; };
 		8B89F72B26935ABE008ADC64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B89F72926935ABE008ADC64 /* LaunchScreen.storyboard */; };
 		8B89F73326935C84008ADC64 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B89F73226935C84008ADC64 /* BountyViewController.swift */; };
+		8BC707C3269C133D004CC48A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC707C2269C133D004CC48A /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8B89F72A26935ABE008ADC64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B89F72C26935ABE008ADC64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B89F73226935C84008ADC64 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
+		8BC707C2269C133D004CC48A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				8B89F72026935ABC008ADC64 /* SceneDelegate.swift */,
 				8B89F72426935ABC008ADC64 /* Main.storyboard */,
 				8B89F73226935C84008ADC64 /* BountyViewController.swift */,
+				8BC707C2269C133D004CC48A /* DetailViewController.swift */,
 				8B89F72726935ABE008ADC64 /* Assets.xcassets */,
 				8B89F72926935ABE008ADC64 /* LaunchScreen.storyboard */,
 				8B89F72C26935ABE008ADC64 /* Info.plist */,
@@ -140,6 +143,7 @@
 				8B89F71F26935ABC008ADC64 /* AppDelegate.swift in Sources */,
 				8B89F73326935C84008ADC64 /* BountyViewController.swift in Sources */,
 				8B89F72126935ABC008ADC64 /* SceneDelegate.swift in Sources */,
+				8BC707C3269C133D004CC48A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
