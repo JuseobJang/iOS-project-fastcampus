@@ -10,7 +10,7 @@
 
 - Strings & Characters
 
-- [Collection Types]("./CollectionTypes")
+- [Collection Types](./Swift/CollectionTypes)
 
 - Functions
 
