@@ -26,4 +26,8 @@
 
 ## Design pattern
 
-- MVVM pattern
+- [MVC pattern](./DesignPattern/MVC)
+
+- [MVVM pattern](./DesignPattern/MVVM)
+
+- VIPER pattern
