@@ -29,10 +29,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
     
-//    var name: String?
-//    var bounty: Int?
-    
-    var bountyInfo: BountyInfo?
+    let viewModel = DetailViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,22 +37,23 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI(){
-        if let bountyInfo = self.bountyInfo {
+        if let bountyInfo = self.viewModel.bountyInfo {
             imgView.image = bountyInfo.image
             nameLabel.text = bountyInfo.name
             bountyLabel.text = "\(bountyInfo.bounty)"
         }
-        
-//        if let name = self.name, let bounty = self.bounty {
-//            imgView.image = UIImage(named: "\(name).jpg")
-//            nameLabel.text = name
-//            bountyLabel.text = "\(bounty)"
-//        }
     }
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil) // dismiss() 현재 페이지를 닫는 함수
     }
-     
+}
 
+
+class DetailViewModel{
+    var bountyInfo: BountyInfo?
+    
+    func update(model: BountyInfo){
+        bountyInfo = model
+    }
 }
