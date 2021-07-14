@@ -1,6 +1,8 @@
 # MVVM pattern
 
-![MVVM2](https://user-images.githubusercontent.com/22047374/125567835-7f8e226b-7525-4fb4-9997-be1bb0a43a14.png)
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/22047374/125567835-7f8e226b-7525-4fb4-9997-be1bb0a43a14.png" height="200px" width="400px">
+</p>
 
 Model: 데이터와 비즈니스 로직을 관리
 
