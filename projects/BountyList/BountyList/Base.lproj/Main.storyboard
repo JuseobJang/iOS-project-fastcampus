@@ -138,6 +138,7 @@
                             <constraint firstItem="5rp-f0-2R4" firstAttribute="trailing" secondItem="mpL-1k-d0x" secondAttribute="trailing" constant="16" id="zcd-Nj-hsR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2jM-4o-EFL"/>
                     <connections>
                         <outlet property="bountyLabel" destination="lzf-0t-nhz" id="UWb-Cx-sn1"/>
                         <outlet property="imgView" destination="ORm-Bb-Y1q" id="PMs-nL-mWv"/>
