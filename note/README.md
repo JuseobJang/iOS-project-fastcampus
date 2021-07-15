@@ -6,7 +6,7 @@
 
 ## Swift
 
-- The Basics
+- [The Basics](./Swift/TheBasics)
 
 - Strings & Characters
 
