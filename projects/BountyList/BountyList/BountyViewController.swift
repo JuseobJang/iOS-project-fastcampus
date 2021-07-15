@@ -9,26 +9,33 @@
  MVVM pattern
  
  Model
-  - Bounty Info
-    BountyInfo 만들어야함
+ - Bounty Info
+ BountyInfo 만들어야함
  
  View
-  - ListCell
-    ListCell 필요한 정보를 ViewModel에서 받야한다.
-    ListCell은 ViewModel로 부터 받은 정보로 뷰 얻데이트
+ - ListCell
+ ListCell 필요한 정보를 ViewModel에서 받야한다.
+ ListCell은 ViewModel로 부터 받은 정보로 뷰 얻데이트
  
  ViewModel
-  - BountyViewModel
-    BountyViewModel 만들기 + 뷰에서 필요한 메서드 만들기
-    모델을 가지고 있어야 함 => BountyInfo
+ - BountyViewModel
+ BountyViewModel 만들기 + 뷰에서 필요한 메서드 만들기
+ 모델을 가지고 있어야 함 => BountyInfo
  */
 
 import UIKit
 
-class BountyViewController: UIViewController
-                            , UITableViewDataSource, UITableViewDelegate {
-
+class BountyViewController: UIViewController,
+                            UICollectionViewDataSource,
+                            UICollectionViewDelegate,
+                            UICollectionViewDelegateFlowLayout{
+    
+    
     let viewModel = BountyViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     // performSegue() 함수 실행후에 실행됨 sender를 받아옴
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,34 +48,43 @@ class BountyViewController: UIViewController
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    
-    // UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //     UICollectionViewDataSource
+    //     몇개의 셀을 보여줄지
+    //     셀을 어떻게 표현할지
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.numOfBountyInfoList
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else{
-            return UITableViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCell", for: indexPath)as? GridCell else {
+            return UICollectionViewCell()
         }
-        let bountyInfo = viewModel.bountyInfo(at: indexPath.row)
+        
+        let bountyInfo = viewModel.bountyInfo(at: indexPath.item)
         cell.update(info: bountyInfo)
         return cell
     }
     
-    // UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("--> \(indexPath.row)")
-        performSegue(withIdentifier: "showDetail", sender: indexPath.row) // prepare()함수에 sender에 indexPath.row를 넘겨줌
+    //     UICollectionViewDelegate
+    //     셀이 클릭 되었을 때 어떻게 할지
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("--> \(indexPath.item)")
+        performSegue(withIdentifier: "showDetail", sender: indexPath.item)
+    }
+    
+    //     UICollectionViewDelegateFlowLayout
+    //     셀 사이즈 계산
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemSpacing: CGFloat = 10
+        let textAreaHeight: CGFloat = 65
         
+        let width: CGFloat = (collectionView.bounds.width - itemSpacing)/2
+        let height: CGFloat = width * (10/7) + textAreaHeight
+        return CGSize(width: width, height: height)
     }
 }
 
-class ListCell: UITableViewCell {
+class GridCell: UICollectionViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
