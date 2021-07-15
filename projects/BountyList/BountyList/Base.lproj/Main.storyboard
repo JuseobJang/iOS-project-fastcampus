@@ -148,10 +148,8 @@
                     <navigationItem key="navigationItem" id="2jM-4o-EFL"/>
                     <connections>
                         <outlet property="bountyLabel" destination="lzf-0t-nhz" id="UWb-Cx-sn1"/>
-                        <outlet property="bountyLabelCenterX" destination="mFP-W9-NPk" id="NWr-7l-kUh"/>
                         <outlet property="imgView" destination="ORm-Bb-Y1q" id="PMs-nL-mWv"/>
                         <outlet property="nameLabel" destination="u9F-Ay-hhe" id="BDn-Qc-CPb"/>
-                        <outlet property="nameLabelCenterX" destination="1ah-gM-jWz" id="DOD-xh-KL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmD-Sa-9ET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
