@@ -8,8 +8,7 @@
 
 - [The Basics](./Swift/TheBasics)
 
-- Strings & Characters
-
+- [Strings & Characters](./Swift/Strings&Characters)
 - [Collection Types](./Swift/CollectionTypes)
 
 - Functions
