@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     // TODO: 트랙관리 객체 추가
-    
+    let trackManager: TrackManager = TrackManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ extension HomeViewController: UICollectionViewDataSource {
     // 몇개 표시 할까?
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // TODO: 트랙매니저에서 트랙갯수 가져오기
-        return 10
+        return trackManager.tracks.count
     }
     
     // 셀 어떻게 표시 할까?
@@ -30,6 +30,9 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionViewCell", for: indexPath) as? TrackCollecionViewCell else {
             return UICollectionViewCell()
         }
+        let track = trackManager.track(at: indexPath.item)
+        cell.updateUI(item: track)
+        
         return cell
     }
     
