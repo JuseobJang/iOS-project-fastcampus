@@ -35,7 +35,7 @@ class TodoListViewController: UIViewController {
     
     @IBAction func isTodayButtonTapped(_ sender: Any) {
         // TODO: 투데이 버튼 토글 작업
-        
+        isTodayButton.isSelected = !isTodayButton.isSelected
     }
     
     @IBAction func addTaskButtonTapped(_ sender: Any) {
