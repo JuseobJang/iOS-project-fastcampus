@@ -12,11 +12,52 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
+        var movies: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
 }
+
+extension SearchViewController: UICollectionViewDataSource{
+    // 몇개
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    // 어떻게 표현
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ResultCell", for: indexPath) as? ResultCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.backgroundColor = .red
+        return cell
+    }
+}
+
+extension SearchViewController: UICollectionViewDelegate{
+    
+}
+
+extension SearchViewController: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let margin: CGFloat = 8
+        let itemSpacing: CGFloat = 10
+        let width = (collectionView.bounds.width - margin * 2 - itemSpacing * 2)/3
+        let height = width * 10/7
+        return CGSize(width: width, height: height)
+    }
+}
+
+
+class ResultCell: UICollectionViewCell {
+    @IBOutlet weak var movieThumbnail: UIImageView!
+}
+
+
 
 extension SearchViewController: UISearchBarDelegate {
     // 검색 버튼 눌렸을 때 처리 구현
@@ -39,8 +80,11 @@ extension SearchViewController: UISearchBarDelegate {
         SearchApi.search(searchTerm){ movies in
             // collection view 로 표현
             print("---> \(movies.count) + \(movies.first!.title)")
+            self.movies = movies
+            self.resultCollectionView.reloadData()
             
         }
+        
         
         print("---> \(searchTerm)")
     }
