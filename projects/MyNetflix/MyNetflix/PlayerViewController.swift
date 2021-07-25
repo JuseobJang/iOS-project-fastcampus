@@ -24,15 +24,42 @@ class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerView.player = player
+    }
+    
+    // 보여지기 직전
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        play()
     }
     
     @IBAction func togglePlayButton(_ sender: Any) {
-        playButton.isSelected = !playButton.isSelected
+        if player.isPlaying {
+            pause()
+        }else{
+            play()
+        }
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
+        reset()
         dismiss(animated: false, completion: nil)
     }
+    
+    func play(){
+        player.play()
+        playButton.isSelected = true
+    }
+    
+    func pause(){
+        player.pause()
+        playButton.isSelected = false
+    }
+    
+    func reset(){
+        player.replaceCurrentItem(with: nil)
+    }
+    
 }
 
 extension AVPlayer {
