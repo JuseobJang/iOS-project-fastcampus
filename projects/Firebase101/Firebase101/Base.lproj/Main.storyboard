@@ -28,19 +28,59 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svq-m5-xS0">
+                                <rect key="frame" x="171" y="341" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ST-KF-Cm8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqn-04-GZj">
+                                <rect key="frame" x="179" y="443" width="56" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="fetchCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Zw-yj-wQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xo-jb-ecu">
+                                <rect key="frame" x="167" y="545" width="80" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WuV-pf-Mop"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXV-Io-oV1">
+                                <rect key="frame" x="172" y="647" width="70" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteCustomer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0uI-LV-Grf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Sqn-04-GZj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="01T-10-iph"/>
+                            <constraint firstItem="6xo-jb-ecu" firstAttribute="top" secondItem="Sqn-04-GZj" secondAttribute="bottom" constant="60" id="2cc-wb-2dT"/>
+                            <constraint firstItem="Sqn-04-GZj" firstAttribute="top" secondItem="Svq-m5-xS0" secondAttribute="bottom" constant="60" id="4uS-eZ-Vh3"/>
+                            <constraint firstItem="uXV-Io-oV1" firstAttribute="top" secondItem="6xo-jb-ecu" secondAttribute="bottom" constant="60" id="7b7-hI-yq0"/>
+                            <constraint firstItem="uXV-Io-oV1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IPI-Wt-qHF"/>
+                            <constraint firstItem="6xo-jb-ecu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JfD-UF-Hld"/>
+                            <constraint firstItem="Svq-m5-xS0" firstAttribute="top" secondItem="qK2-l2-GBE" secondAttribute="bottom" constant="85" id="OAS-CU-3pY"/>
                             <constraint firstItem="qK2-l2-GBE" firstAttribute="top" secondItem="h4c-qF-muQ" secondAttribute="bottom" constant="75" id="VnC-iR-F9e"/>
                             <constraint firstItem="h4c-qF-muQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="deQ-kc-PpE"/>
+                            <constraint firstItem="Svq-m5-xS0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gbO-93-YHJ"/>
                             <constraint firstItem="h4c-qF-muQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="m4V-5L-lFU"/>
                             <constraint firstItem="qK2-l2-GBE" firstAttribute="centerX" secondItem="h4c-qF-muQ" secondAttribute="centerX" id="vNF-Kr-NTW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dataLabel" destination="h4c-qF-muQ" id="Ewz-cZ-SiK"/>
-                        <outlet property="numOfCustomer" destination="qK2-l2-GBE" id="LS9-Ow-XtR"/>
+                        <outlet property="dataLabel" destination="h4c-qF-muQ" id="AOk-2A-7tN"/>
+                        <outlet property="numOfCustomer" destination="qK2-l2-GBE" id="dIi-47-vEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
