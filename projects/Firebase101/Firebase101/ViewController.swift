@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     
     let db = Database.database().reference()
     @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var numOfCustomer: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabel()
-        saveBasicTypes()
-        saveCustomers()
+//        saveBasicTypes()
+//        saveCustomers()
+        fetchCustomer()
         
     }
     func updateLabel(){
@@ -59,7 +61,31 @@ extension ViewController {
     }
 }
 
-struct Customer{
+// MARK: READ(FETCH) Data
+extension ViewController {
+    func fetchCustomer(){
+        db.child("customers").observeSingleEvent(of: .value){ snapshot in
+            print("\(snapshot.value)")
+            
+            do {
+                let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
+                let decoder = JSONDecoder()
+                let customers: [Customer] = try decoder.decode([Customer].self,  from: data)
+                
+                DispatchQueue.main.async {
+                    self.numOfCustomer.text = "# of Customer: \(customers.count)"
+                }
+            } catch {
+                print("error")
+            }
+            
+        }
+        
+    }
+}
+
+
+struct Customer: Codable{
     static var id = 0
     
     let id: String
@@ -73,7 +99,7 @@ struct Customer{
     }
 }
 
-struct Book {
+struct Book: Codable {
     let title: String
     let author: String
     
