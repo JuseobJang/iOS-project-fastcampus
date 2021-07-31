@@ -103,7 +103,7 @@ extension SearchViewController: UISearchBarDelegate {
             // collection view 로 표현
             print("---> \(movies.count) + \(movies.first?.title)")
             let timestamp = Date().timeIntervalSince1970.rounded()
-            self.db.childByAutoId().setValue(["tert": searchTerm, "timestamp": timestamp])
+            self.db.childByAutoId().setValue(["term": searchTerm, "timestamp": timestamp])
             DispatchQueue.main.async { // UI update는 매인 스레드에서 실행
                 self.movies = movies
                 self.resultCollectionView.reloadData()
