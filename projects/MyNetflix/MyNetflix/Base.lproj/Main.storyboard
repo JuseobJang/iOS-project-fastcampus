@@ -248,16 +248,71 @@
             <objects>
                 <viewController id="Blf-Or-i5j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce7-Bh-AkS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8A-dE-kP9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1473"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNp-c1-7wh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MwA-NF-8Wd">
+                                                <rect key="frame" x="16" y="20" width="382" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="OEd-gZ-zIn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XGj-Jg-9wb">
+                                                <rect key="frame" x="16" y="328" width="382" height="600"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXx-9v-AmT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="600"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="600" id="6g3-my-opK"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="XGj-Jg-9wb" firstAttribute="leading" secondItem="eNp-c1-7wh" secondAttribute="leading" constant="16" id="7N8-Pp-zAZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="XGj-Jg-9wb" secondAttribute="trailing" constant="16" id="DKp-be-X94"/>
+                                            <constraint firstItem="MwA-NF-8Wd" firstAttribute="leading" secondItem="eNp-c1-7wh" secondAttribute="leading" constant="16" id="Iab-DA-w4K"/>
+                                            <constraint firstItem="XGj-Jg-9wb" firstAttribute="top" secondItem="MwA-NF-8Wd" secondAttribute="bottom" constant="8" id="Sbu-xM-qUg"/>
+                                            <constraint firstAttribute="trailing" secondItem="MwA-NF-8Wd" secondAttribute="trailing" constant="16" id="YXp-h2-bQK"/>
+                                            <constraint firstItem="MwA-NF-8Wd" firstAttribute="top" secondItem="eNp-c1-7wh" secondAttribute="top" constant="20" id="qZI-op-8ez"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eNp-c1-7wh" firstAttribute="leading" secondItem="c8A-dE-kP9" secondAttribute="leading" id="K29-mI-nBv"/>
+                                    <constraint firstAttribute="trailing" secondItem="eNp-c1-7wh" secondAttribute="trailing" id="cPN-lQ-gJQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eNp-c1-7wh" secondAttribute="bottom" id="fd5-BW-rRx"/>
+                                    <constraint firstItem="eNp-c1-7wh" firstAttribute="top" secondItem="c8A-dE-kP9" secondAttribute="top" id="waN-VE-SEl"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cEW-rw-DWC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eNp-c1-7wh" firstAttribute="width" secondItem="ce7-Bh-AkS" secondAttribute="width" id="40f-tr-Tm6"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="trailing" secondItem="c8A-dE-kP9" secondAttribute="trailing" id="6NI-jq-t3x"/>
+                            <constraint firstItem="c8A-dE-kP9" firstAttribute="leading" secondItem="cEW-rw-DWC" secondAttribute="leading" id="7l0-IL-IKn"/>
+                            <constraint firstItem="c8A-dE-kP9" firstAttribute="top" secondItem="cEW-rw-DWC" secondAttribute="top" id="M1f-Ik-lOV"/>
+                            <constraint firstItem="eNp-c1-7wh" firstAttribute="height" secondItem="ce7-Bh-AkS" secondAttribute="height" priority="250" id="M43-29-GJw"/>
+                            <constraint firstItem="cEW-rw-DWC" firstAttribute="bottom" secondItem="c8A-dE-kP9" secondAttribute="bottom" id="kXe-33-Asn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="공개예정" image="play.rectangle.fill" catalog="system" id="pxU-OE-cdZ"/>
+                    <size key="freeformSize" width="414" height="1600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J18-X4-5SI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3001" y="990"/>
+            <point key="canvasLocation" x="3000.0000000000005" y="989.73214285714278"/>
         </scene>
         <!--더보기-->
         <scene sceneID="Lca-zO-Qyt">
@@ -526,6 +581,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
