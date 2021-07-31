@@ -9,8 +9,11 @@
 import UIKit
 import Kingfisher
 import AVFoundation
+import Firebase
 
 class SearchViewController: UIViewController {
+    
+    let db = Database.database().reference().child("searchHistory")
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var resultCollectionView: UICollectionView!
@@ -99,6 +102,8 @@ extension SearchViewController: UISearchBarDelegate {
         SearchApi.search(searchTerm){ movies in
             // collection view 로 표현
             print("---> \(movies.count) + \(movies.first?.title)")
+            let timestamp = Date().timeIntervalSince1970.rounded()
+            self.db.childByAutoId().setValue(["term": searchTerm, "timestamp": timestamp])
             DispatchQueue.main.async { // UI update는 매인 스레드에서 실행
                 self.movies = movies
                 self.resultCollectionView.reloadData()
