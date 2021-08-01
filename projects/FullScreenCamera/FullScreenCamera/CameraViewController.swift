@@ -28,7 +28,7 @@ class CameraViewController: UIViewController {
     let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(
         deviceTypes: [.builtInDualCamera, .builtInWideAngleCamera, .builtInTrueDepthCamera], // camera 종류
         mediaType: .video,
-        position: .back)
+        position: .unspecified)
     
     
     @IBOutlet weak var photoLibraryButton: UIButton!
@@ -70,22 +70,72 @@ class CameraViewController: UIViewController {
     
     @IBAction func switchCamera(sender: Any) {
         // TODO: 카메라는 1개 이상이어야함
-        
-        
+        guard videoDeviceDiscoverySession.devices.count > 1 else {
+            return
+        }
         // TODO: 반대 카메라 찾아서 재설정
+        // - 반대 카메라 찾기
+        // - 새로운 디바이스를 통해 세션을 업데이트
+        // - 카메라 토글 버튼 업데이트
+        
+        sessionQueue.async {
+            // 반대 카메라 찾기
+            let currentVideoDevice = self.videoDeviceInput.device
+            let currentPosition = currentVideoDevice.position
+            let isFront  = currentPosition == .front
+            let prefferedPosition: AVCaptureDevice.Position = isFront ? .back : .front
+            
+            let devices = self.videoDeviceDiscoverySession.devices
+            var newVideoDevice: AVCaptureDevice?
+            newVideoDevice = devices.first(where: { device in
+                return prefferedPosition == device.position
+            })
+            // 새로운 디바이스를 통해 세션을 업데이트
+            if let newDevice = newVideoDevice {
+                do{
+                    let videoDeviceInput = try AVCaptureDeviceInput(device: newDevice)
+                    self.captureSession.beginConfiguration()
+                    self.captureSession.removeInput(self.videoDeviceInput)
+                    
+                    if self.captureSession.canAddInput(videoDeviceInput){
+                        self.captureSession.addInput(videoDeviceInput)
+                        self.videoDeviceInput = videoDeviceInput
+                    } else {
+                        self.captureSession.addInput(self.videoDeviceInput)
+                    }
+                    self.captureSession.commitConfiguration()
+                    
+                    // 카메라 토글 버튼 업데이트
+                    DispatchQueue.main.async {
+                        self.updateSwitchCameraIcon(position: prefferedPosition)
+                    }
+                } catch let error {
+                    print("error occured while creating device input: \(error.localizedDescription)")
+                }
+            }
+        }
         
     }
     
     func updateSwitchCameraIcon(position: AVCaptureDevice.Position) {
         // TODO: Update ICON
-        
+        switch position {
+        case .front:
+            let image = #imageLiteral(resourceName: "ic_camera_front")
+            switchButton.setImage(image, for: .normal)
+        case .back:
+            let image = #imageLiteral(resourceName: "ic_camera_rear")
+            switchButton.setImage(image, for: .normal)
+        default :
+            break
+        }
         
     }
     
     @IBAction func capturePhoto(_ sender: UIButton) {
         // TODO: photoOutput의 capturePhoto 메소드
-
-
+        
+        
     }
     
     
@@ -118,6 +168,7 @@ extension CameraViewController {
             let videoDeviceInput = try AVCaptureDeviceInput(device: camera)
             if captureSession.canAddInput(videoDeviceInput) { // 추가 할 수 있는지 확인
                 captureSession.addInput(videoDeviceInput)
+                self.videoDeviceInput = videoDeviceInput
             } else {
                 captureSession.commitConfiguration()
                 return
