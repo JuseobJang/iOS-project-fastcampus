@@ -12,6 +12,23 @@ import Photos
 
 class CameraViewController: UIViewController {
     // TODO: 초기 설정 1
+    /*
+     - captureSession
+     - AVCaptureDeviceInput
+     - AVCapturePhotoOutput
+     - Custom Dispatch Queue를 이용하여 카메라 작업 실행
+     - AVCaptureDevice DiscoverySession
+     */
+    
+    let captureSession = AVCaptureSession()
+    var videoDeviceInput: AVCaptureDeviceInput!
+    let photoOutput = AVCapturePhotoOutput()
+    
+    let sessionQueue = DispatchQueue(label: "session Queue")
+    let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(
+        deviceTypes: [.builtInDualCamera, .builtInWideAngleCamera, .builtInTrueDepthCamera], // camera 종류
+        mediaType: .video,
+        position: .unspecified)
     
 
     @IBOutlet weak var photoLibraryButton: UIButton!
@@ -27,12 +44,27 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: 초기 설정 2
-        
+        previewView.session = captureSession
+        sessionQueue.async {
+            self.setupSession()
+            self.startSession()
+            
+        }
+        setupUI()
         
     }
     
     func setupUI() {
-
+        photoLibraryButton.layer.cornerRadius = 10
+        photoLibraryButton.layer.masksToBounds = true
+        photoLibraryButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        photoLibraryButton.layer.borderWidth = 1
+        
+        captureButton.layer.cornerRadius = captureButton.bounds.height/2
+        captureButton.layer.masksToBounds = true
+        
+        blurBGView.layer.cornerRadius = blurBGView.bounds.height/2
+        blurBGView.layer.masksToBounds = true
     }
     
     
