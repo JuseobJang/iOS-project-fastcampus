@@ -28,9 +28,9 @@ class CameraViewController: UIViewController {
     let videoDeviceDiscoverySession = AVCaptureDevice.DiscoverySession(
         deviceTypes: [.builtInDualCamera, .builtInWideAngleCamera, .builtInTrueDepthCamera], // camera 종류
         mediaType: .video,
-        position: .unspecified)
+        position: .back)
     
-
+    
     @IBOutlet weak var photoLibraryButton: UIButton!
     @IBOutlet weak var previewView: PreviewView!
     @IBOutlet weak var captureButton: UIButton!
@@ -105,20 +105,59 @@ extension CameraViewController {
         // - Add Photo Output
         // - commitConfiguration
         
-
+        captureSession.sessionPreset = .photo
+        captureSession.beginConfiguration()
         
+        // Add Video Input
+        //        var defaultVideoDevice: AVCaptureDevice?
+        guard let camera = videoDeviceDiscoverySession.devices.first else{
+            captureSession.commitConfiguration()
+            return
+        }
+        do{
+            let videoDeviceInput = try AVCaptureDeviceInput(device: camera)
+            if captureSession.canAddInput(videoDeviceInput) { // 추가 할 수 있는지 확인
+                captureSession.addInput(videoDeviceInput)
+            } else {
+                captureSession.commitConfiguration()
+                return
+            }
+        } catch let error {
+            captureSession.commitConfiguration()
+            return
+        }
         
+        // Add output
+        photoOutput.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+        if captureSession.canAddOutput(photoOutput){
+            captureSession.addOutput(photoOutput)
+        } else {
+            captureSession.commitConfiguration()
+            return
+        }
+        
+        captureSession.commitConfiguration()
     }
     
     
     
     func startSession() {
         // TODO: session Start
-
+        sessionQueue.async {
+            if !self.captureSession.isRunning{
+                self.captureSession.startRunning()
+            }
+        }
+        
     }
     
     func stopSession() {
         // TODO: session Stop
+        sessionQueue.async {
+            if self.captureSession.isRunning{
+                self.captureSession.stopRunning()
+            }
+        }
         
     }
 }
