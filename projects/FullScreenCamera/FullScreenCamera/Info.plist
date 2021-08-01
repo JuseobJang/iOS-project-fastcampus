@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>FullScreenCamera uses the camera to take photos and video</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>FullScreenCamera saves captured photos and videos to your photo library</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
