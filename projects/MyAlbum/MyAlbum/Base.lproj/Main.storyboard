@@ -30,8 +30,11 @@
                                     <action selector="hello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQx-r6-ksW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgj-Iu-YJm">
-                                <rect key="frame" x="156" y="141" width="102" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyPics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgj-Iu-YJm">
+                                <rect key="frame" x="107" y="141" width="200" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="q8N-nT-9lg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,15 +56,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pgj-Iu-YJm" secondAttribute="trailing" constant="156" id="Fan-5x-Ae6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lNf-H5-9tY" secondAttribute="bottom" constant="60" id="HYT-Px-zQq"/>
                             <constraint firstItem="IzB-Nj-3e6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QRF-w7-WgZ"/>
                             <constraint firstItem="lNf-H5-9tY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yn4-Cq-mSG"/>
                             <constraint firstItem="lNf-H5-9tY" firstAttribute="top" secondItem="nA4-YG-oFW" secondAttribute="bottom" constant="64" id="Z8h-dO-XLC"/>
+                            <constraint firstItem="pgj-Iu-YJm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z9C-r3-bkp"/>
                             <constraint firstItem="nA4-YG-oFW" firstAttribute="centerX" secondItem="lNf-H5-9tY" secondAttribute="centerX" id="bNQ-Yh-OW9"/>
                             <constraint firstItem="IzB-Nj-3e6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="181" id="fOb-qt-w5v"/>
                             <constraint firstItem="pgj-Iu-YJm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="vsN-h3-bNf"/>
-                            <constraint firstItem="pgj-Iu-YJm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="zSR-om-Vq3"/>
                         </constraints>
                     </view>
                     <connections>
