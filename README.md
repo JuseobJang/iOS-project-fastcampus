@@ -30,7 +30,7 @@
 
 ### Todo List App
 
-**테이블 뷰와 체크박스 등을 이용하여 계획을 작성하는 Todo list 앱** [자세히 보기](projects/TodoList)
+**테이블 및 콜렉션 뷰와 체크박스 등을 이용하여 계획을 작성하는 Todo list 앱** [자세히 보기](projects/TodoList)
 
 <p align="center"> 
   <img width="250" alt="Todo1" src="https://user-images.githubusercontent.com/22047374/128479447-4e2eac6c-a974-431e-892d-9a864661e0fa.png">
