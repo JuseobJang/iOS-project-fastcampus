@@ -14,7 +14,7 @@
 - [Todo List App](#Todo-List-App)
 - [Bounty List App](#Bounty-List-App)
 - [Apple Music Style App](#Apple-Music-Style-App)
-- [My Netflix App](#My-Netfilx-App)
+- [My Netflix App](#My-Netflix-App)
 - [Full Screen Camera App](#Full-Screen-Camera-App)
 - [My Dog Cat Classifier App](#My-Dog-Cat-Classifier-App)
 
