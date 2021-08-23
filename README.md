@@ -69,7 +69,7 @@
 
 ### Full Screen Camera App 
 
-**AVFoundation의 Medai Capture 를 이용하여 만든 풀 스크린 카메라 앱** [자세히 보기](projects/FullScreenCamera)
+**AVFoundation의 Media Capture 를 이용하여 만든 풀 스크린 카메라 앱** [자세히 보기](projects/FullScreenCamera)
 
 <p align="center"> 
   <img width="250" alt="dog" src="https://user-images.githubusercontent.com/22047374/128517509-c5160da9-7c5a-4e3c-b861-ccc2be7bb0db.png">
