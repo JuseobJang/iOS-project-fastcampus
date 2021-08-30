@@ -19,7 +19,7 @@
 - [My Dog Cat Classifier App](#My-Dog-Cat-Classifier-App)
 
 
-### My Album App
+### My Album Appㅌ
 
 **기본적인 오토 레이아웃과 라벨, 이미지 뷰, 버튼을 이용한 앨범 앱** [자세히 보기](projects/MyAlbum)
 
