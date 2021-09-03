@@ -8,8 +8,10 @@
 	<img src="https://img.icons8.com/ios/250/000000/ios-logo.png" alt="iOS" width="200" height="200"/>
 	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="swift" width="200" height="200"/> 
 </p> 
-
 ## Contents
+
+**iOS 앱개발 올인원 패키지 Online**
+
 - [My Album App](#My-Album-App)
 - [Todo List App](#Todo-List-App)
 - [Bounty List App](#Bounty-List-App)
@@ -18,8 +20,14 @@
 - [Full Screen Camera App](#Full-Screen-Camera-App)
 - [My Dog Cat Classifier App](#My-Dog-Cat-Classifier-App)
 
+**30개의 프로젝트로 배우는 iOS 앱 개발 with Swift 초격차 패키지 Online**
 
-### My Album Appㅌ
+
+
+### iOS 앱개발 올인원 패키지 Online
+
+
+#### My Album App
 
 **기본적인 오토 레이아웃과 라벨, 이미지 뷰, 버튼을 이용한 앨범 앱** [자세히 보기](projects/MyAlbum)
 
@@ -28,7 +36,7 @@
 </p> 
 
 
-### Todo List App
+#### Todo List App
 
 **테이블 및 콜렉션 뷰와 체크박스 등을 이용하여 계획을 작성하는 Todo list 앱** [자세히 보기](projects/TodoList)
 
@@ -38,7 +46,7 @@
 </p> 
 
 
-### Bounty List App
+#### Bounty List App
 
 **콜렉션 뷰와 세그를 이용한 화면 전환 그리고 애니메이션을 이용한 현상금 앱** [자세히 보기](projects/BountyList)
 
@@ -48,7 +56,7 @@
 </p> 
 
 
-### Apple Music Style App
+#### Apple Music Style App
 
 **AVFoundation 를 이용한 음악 플레이 앱** [자세히 보기](projects/AppleMusicStApp)
 
@@ -57,7 +65,7 @@
 	<img width="250" alt="music2" src="https://user-images.githubusercontent.com/22047374/128480542-fa6b9c6b-e8f8-4729-84ba-b5c688e8f8c7.png">
 </p> 
 
-### My Netflix App
+#### My Netflix App
 
 **URLSession, GCD(Dispatch Queue) 및 Firebase 연동을 통한 검색어 저장이 가능한 영화 예고편 검색 앱** [자세히 보기](projects/MyNetflix)
 
@@ -67,7 +75,7 @@
   <img width="250" alt="netflix3" src="https://user-images.githubusercontent.com/22047374/128481269-6e7a71bb-4e08-4264-a480-465dbf981185.png">
 </p> 
 
-### Full Screen Camera App 
+#### Full Screen Camera App 
 
 **AVFoundation의 Media Capture 를 이용하여 만든 풀 스크린 카메라 앱** [자세히 보기](projects/FullScreenCamera)
 
@@ -76,7 +84,7 @@
 	<img width="250" alt="cat" src="https://user-images.githubusercontent.com/22047374/128517530-14b65f7c-9112-4ef5-bfe4-ae3db239ef1e.png">
 </p> 
 
-### My Dog Cat Classifier App
+#### My Dog Cat Classifier App
 
 **CoreML 을 이용한 머신러닝 모델 생성과 해당 모델을 이용한 강아지 및 고양이 분류 앱** [자세히 보기](projects/MyDogCatClassifier)
 
@@ -89,3 +97,8 @@
 
 Fast Campus iOS 앱개발 올인원 패키지 Online (이준원 강사님)
 
+
+
+### 30개의 프로젝트로 배우는 iOS 앱 개발 with Swift 초격차 패키지 Online
+
+#### 
