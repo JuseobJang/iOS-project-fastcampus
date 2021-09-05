@@ -6,6 +6,7 @@ target 'SpotifyLoginStApp' do
   use_frameworks!
 
   # Pods for SpotifyLoginStApp
-  pod 'Firebase/Auth' 
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0.2'
 
 end
