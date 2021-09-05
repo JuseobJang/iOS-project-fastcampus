@@ -9,21 +9,27 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var appleLoginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        [emailLoginButton, googleLoginButton, appleLoginButton].forEach{
+            $0?.layer.borderWidth = 1
+            $0?.layer.borderColor = UIColor.white.cgColor
+            $0?.layer.cornerRadius = 30
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 네비게이션 바 숨기기
+        navigationController?.navigationBar.isHidden = true
     }
-    */
-
+    @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
+    }
 }
