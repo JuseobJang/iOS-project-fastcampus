@@ -44,4 +44,12 @@ class CardListViewController: UITableViewController {
         return 80
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detailViewController = storyboard.instantiateViewController(identifier: "CardDetailViewController") as? CardDetailViewController else { return }
+        
+        detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
+        self.show(detailViewController, sender: nil)
+    }
+    
 }
