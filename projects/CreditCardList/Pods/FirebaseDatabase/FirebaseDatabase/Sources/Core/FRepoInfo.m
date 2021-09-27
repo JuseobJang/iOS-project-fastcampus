@@ -25,53 +25,44 @@
 
 @implementation FRepoInfo
 
+@synthesize namespace;
+@synthesize host;
 @synthesize internalHost;
+@synthesize secure;
+@synthesize domain;
 
-- (instancetype)init {
-    [NSException
-         raise:@"FIRDatabaseInvalidInitializer"
-        format:@"Invalid initializer invoked. This is probably a bug in RTDB."];
-    abort();
-}
-
-- (instancetype)initWithHost:(NSString *)aHost
-                    isSecure:(BOOL)isSecure
-               withNamespace:(NSString *)aNamespace {
+- (id)initWithHost:(NSString *)aHost
+          isSecure:(bool)isSecure
+     withNamespace:(NSString *)aNamespace {
     self = [super init];
     if (self) {
-        _host = [aHost copy];
-        _domain =
-            [_host containsString:@"."]
-                ? [_host
-                      substringFromIndex:[_host rangeOfString:@"."].location +
-                                         1]
-                : _host;
-        _secure = isSecure;
-        _namespace = aNamespace;
+        host = aHost;
+        domain =
+            [host containsString:@"."]
+                ? [host
+                      substringFromIndex:[host rangeOfString:@"."].location + 1]
+                : host;
+        secure = isSecure;
+        namespace = aNamespace;
 
         // Get cached internal host if it exists
         NSString *internalHostKey =
-            [NSString stringWithFormat:@"firebase:host:%@", _host];
+            [NSString stringWithFormat:@"firebase:host:%@", self.host];
         NSString *cachedInternalHost = [[NSUserDefaults standardUserDefaults]
             stringForKey:internalHostKey];
         if (cachedInternalHost != nil) {
             internalHost = cachedInternalHost;
         } else {
-            internalHost = [_host copy];
+            internalHost = self.host;
         }
     }
-    return self;
-}
-
-- (instancetype)initWithInfo:(FRepoInfo *)info emulatedHost:(NSString *)host {
-    self = [self initWithHost:host isSecure:NO withNamespace:info.namespace];
     return self;
 }
 
 - (NSString *)description {
     // The namespace is encoded in the hostname, so we can just return this.
     return [NSString
-        stringWithFormat:@"http%@://%@", (_secure ? @"s" : @""), _host];
+        stringWithFormat:@"http%@://%@", (self.secure ? @"s" : @""), self.host];
 }
 
 - (void)setInternalHost:(NSString *)newHost {
@@ -88,7 +79,7 @@
 }
 
 - (void)clearInternalHostCache {
-    self.internalHost = self.host;
+    internalHost = self.host;
 
     // Remove the cached entry
     NSString *internalHostKey =
@@ -129,25 +120,25 @@
     return url;
 }
 
-- (id)copyWithZone:(NSZone *)zone {
+- (id)copyWithZone:(NSZone *)zone;
+{
     return self; // Immutable
 }
 
 - (NSUInteger)hash {
-    NSUInteger result = _host.hash;
-    result = 31 * result + (_secure ? 1 : 0);
-    result = 31 * result + _namespace.hash;
-    result = 31 * result + _host.hash;
+    NSUInteger result = host.hash;
+    result = 31 * result + (secure ? 1 : 0);
+    result = 31 * result + namespace.hash;
+    result = 31 * result + host.hash;
     return result;
 }
 
 - (BOOL)isEqual:(id)anObject {
-    if (![anObject isKindOfClass:[FRepoInfo class]]) {
+    if (![anObject isKindOfClass:[FRepoInfo class]])
         return NO;
-    }
     FRepoInfo *other = (FRepoInfo *)anObject;
-    return _secure == other.secure && [_host isEqualToString:other.host] &&
-           [_namespace isEqualToString:other.namespace];
+    return secure == other.secure && [host isEqualToString:other.host] &&
+           [namespace isEqualToString:other.namespace];
 }
 
 @end

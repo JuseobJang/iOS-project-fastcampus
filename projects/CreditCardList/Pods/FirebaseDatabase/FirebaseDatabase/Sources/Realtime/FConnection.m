@@ -45,11 +45,10 @@ typedef enum {
 #pragma mark -
 #pragma mark Initializers
 
-- (instancetype)initWith:(FRepoInfo *)aRepoInfo
-        andDispatchQueue:(dispatch_queue_t)queue
-             googleAppID:(NSString *)googleAppID
-           lastSessionID:(NSString *)lastSessionID
-           appCheckToken:(NSString *)appCheckToken {
+- (id)initWith:(FRepoInfo *)aRepoInfo
+    andDispatchQueue:(dispatch_queue_t)queue
+         googleAppID:googleAppID
+       lastSessionID:(NSString *)lastSessionID {
     self = [super init];
     if (self) {
         state = REALTIME_STATE_CONNECTING;
@@ -57,8 +56,7 @@ typedef enum {
         self.conn = [[FWebSocketConnection alloc] initWith:self.repoInfo
                                                   andQueue:queue
                                                googleAppID:googleAppID
-                                             lastSessionID:lastSessionID
-                                             appCheckToken:appCheckToken];
+                                             lastSessionID:lastSessionID];
         self.conn.delegate = self;
     }
     return self;

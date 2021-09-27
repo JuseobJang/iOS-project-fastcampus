@@ -14,7 +14,6 @@
 //   limitations under the License.
 //
 
-#if !TARGET_OS_WATCH
 #import <Foundation/Foundation.h>
 #import <Security/SecCertificate.h>
 
@@ -81,9 +80,7 @@ extern NSString *const FSRWebSocketErrorDomain;
 
 @optional
 
-// Exclude the `webSocket` argument since it isn't used in this codebase and it allows for better
-// code sharing with watchOS.
-- (void)webSocketDidOpen;
+- (void)webSocketDidOpen:(FSRWebSocket *)webSocket;
 - (void)webSocket:(FSRWebSocket *)webSocket didFailWithError:(NSError *)error;
 - (void)webSocket:(FSRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean;
 
@@ -108,5 +105,3 @@ extern NSString *const FSRWebSocketErrorDomain;
 + (NSRunLoop *)FSR_networkRunLoop;
 
 @end
-
-#endif  // TARGET_OS_WATCH

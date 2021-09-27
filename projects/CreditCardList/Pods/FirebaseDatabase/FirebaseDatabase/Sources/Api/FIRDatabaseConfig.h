@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol FIRDatabaseConnectionContextProvider;
+@protocol FAuthTokenProvider;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,8 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)initWithSessionIdentifier:(NSString *)identifier
                     googleAppID:(NSString *)googleAppID
-                contextProvider:
-                    (id<FIRDatabaseConnectionContextProvider>)contextProvider;
+              authTokenProvider:(id<FAuthTokenProvider>)authTokenProvider;
 
 /**
  * By default the Firebase Database client will keep data in memory while your

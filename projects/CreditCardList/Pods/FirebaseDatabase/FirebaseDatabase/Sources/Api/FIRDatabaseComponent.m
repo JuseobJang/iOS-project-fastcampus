@@ -20,7 +20,6 @@
 #import "FirebaseDatabase/Sources/Core/FRepoManager.h"
 #import "FirebaseDatabase/Sources/FIRDatabaseConfig_Private.h"
 
-#import "FirebaseAppCheck/Sources/Interop/FIRAppCheckInterop.h"
 #import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
 #import "Interop/Auth/Public/FIRAuthInterop.h"
 
@@ -53,7 +52,8 @@ typedef NSMutableDictionary<NSString *, FIRDatabase *> FIRDatabaseDictionary;
 
 + (void)load {
     [FIRApp registerInternalLibrary:(Class<FIRLibrary>)self
-                           withName:@"fire-db"];
+                           withName:@"fire-db"
+                        withVersion:[FIRDatabase sdkVersion]];
 }
 
 #pragma mark - FIRComponentRegistrant
@@ -116,7 +116,7 @@ typedef NSMutableDictionary<NSString *, FIRDatabase *> FIRDatabaseDictionary;
                     format:@"The Database URL '%@' cannot be parsed. "
                             "Specify a valid DatabaseURL within FIRApp or from "
                             "your databaseForApp:URL: call.",
-                           url];
+                           databaseUrl];
     } else if (![databaseUrl.path isEqualToString:@""] &&
                ![databaseUrl.path isEqualToString:@"/"]) {
         [NSException
@@ -136,12 +136,9 @@ typedef NSMutableDictionary<NSString *, FIRDatabase *> FIRDatabaseDictionary;
                                        [parsedUrl.path toString]];
         FIRDatabase *database = instances[urlIndex];
         if (!database) {
-            id<FIRDatabaseConnectionContextProvider> contextProvider =
-                [FIRDatabaseConnectionContextProvider
-                    contextProviderWithAuth:FIR_COMPONENT(FIRAuthInterop,
-                                                          app.container)
-                                   appCheck:FIR_COMPONENT(FIRAppCheckInterop,
-                                                          app.container)];
+            id<FAuthTokenProvider> authTokenProvider = [FAuthTokenProvider
+                authTokenProviderWithAuth:FIR_COMPONENT(FIRAuthInterop,
+                                                        app.container)];
 
             // If this is the default app, don't set the session persistence key
             // so that we use our default ("default") instead of the FIRApp
@@ -156,7 +153,7 @@ typedef NSMutableDictionary<NSString *, FIRDatabase *> FIRDatabaseDictionary;
             FIRDatabaseConfig *config = [[FIRDatabaseConfig alloc]
                 initWithSessionIdentifier:sessionIdentifier
                               googleAppID:app.options.googleAppID
-                          contextProvider:contextProvider];
+                        authTokenProvider:authTokenProvider];
             database = [[FIRDatabase alloc] initWithApp:app
                                                repoInfo:parsedUrl.repoInfo
                                                  config:config];

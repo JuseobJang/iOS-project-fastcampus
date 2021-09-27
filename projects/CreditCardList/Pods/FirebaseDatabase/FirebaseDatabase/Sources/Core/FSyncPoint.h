@@ -41,10 +41,6 @@
                 writesCache:(FWriteTreeRef *)writesCache
                 serverCache:(id<FNode>)optCompleteServerCache;
 
-- (FView *)getView:(FQuerySpec *)query
-       writesCache:(FWriteTreeRef *)writesCache
-       serverCache:(FCacheNode *)serverCache;
-
 /**
  * Returns array of FEvent
  */
@@ -65,7 +61,6 @@
  */
 - (NSArray *)queryViews;
 - (id<FNode>)completeServerCacheAtPath:(FPath *)path;
-- (id<FNode>)completeEventCacheAtPath:(FPath *)path;
 - (FView *)viewForQuery:(FQuerySpec *)query;
 - (BOOL)viewExistsForQuery:(FQuerySpec *)query;
 - (BOOL)hasCompleteView;
