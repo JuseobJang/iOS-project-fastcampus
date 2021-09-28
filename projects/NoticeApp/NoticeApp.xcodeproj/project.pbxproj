@@ -13,6 +13,8 @@
 		8BAC10D12702F5130057AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC10CF2702F5130057AA1E /* Main.storyboard */; };
 		8BAC10D32702F5170057AA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC10D22702F5170057AA1E /* Assets.xcassets */; };
 		8BAC10D62702F5170057AA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC10D42702F5170057AA1E /* LaunchScreen.storyboard */; };
+		8BAC10DF2702F5D60057AA1E /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC10DD2702F5D60057AA1E /* NoticeViewController.swift */; };
+		8BAC10E02702F5D60057AA1E /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAC10DE2702F5D60057AA1E /* NoticeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8BAC10D22702F5170057AA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BAC10D52702F5170057AA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BAC10D72702F5170057AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BAC10DD2702F5D60057AA1E /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		8BAC10DE2702F5D60057AA1E /* NoticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8BAC10D22702F5170057AA1E /* Assets.xcassets */,
 				8BAC10D42702F5170057AA1E /* LaunchScreen.storyboard */,
 				8BAC10D72702F5170057AA1E /* Info.plist */,
+				8BAC10DD2702F5D60057AA1E /* NoticeViewController.swift */,
+				8BAC10DE2702F5D60057AA1E /* NoticeViewController.xib */,
 			);
 			path = NoticeApp;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			files = (
 				8BAC10D62702F5170057AA1E /* LaunchScreen.storyboard in Resources */,
 				8BAC10D32702F5170057AA1E /* Assets.xcassets in Resources */,
+				8BAC10E02702F5D60057AA1E /* NoticeViewController.xib in Resources */,
 				8BAC10D12702F5130057AA1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			files = (
 				8BAC10CE2702F5130057AA1E /* ViewController.swift in Sources */,
 				8BAC10CA2702F5130057AA1E /* AppDelegate.swift in Sources */,
+				8BAC10DF2702F5D60057AA1E /* NoticeViewController.swift in Sources */,
 				8BAC10CC2702F5130057AA1E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
