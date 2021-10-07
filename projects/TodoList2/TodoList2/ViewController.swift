@@ -9,16 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var tasks = [Task]()
+    var tasks = [Task]() {
+        didSet {
+            self.saveTasks()
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        self.loadTasks()
     }
-
-
+    
+    
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
     }
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
@@ -36,6 +42,28 @@ class ViewController: UIViewController {
             textField.placeholder = "할 일을 입력해주세요."
         })
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func saveTasks() {
+        let data = self.tasks.map {
+            [
+                "title": $0.title,
+                "done": $0.done
+            ]
+        }
+        let userDefault = UserDefaults.standard
+        userDefault.set(data,forKey: "tasks")
+    }
+    
+    func loadTasks() {
+        let userDefaults = UserDefaults.standard
+        guard let data = userDefaults.object(forKey: "tasks") as? [[String : Any]] else { return }
+        self.tasks = data.compactMap{
+            guard let title = $0["title"] as? String else { return nil }
+            guard let done = $0["done"] as? Bool else {return nil}
+            return Task(title: title, done: done)
+        }
+        
     }
 }
 
