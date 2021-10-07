@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F97BC5FFD834AD75EC7CF38 /* Pods_WarningApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E20588B66055C95FACDBE98 /* Pods_WarningApp.framework */; };
 		8B06B3F5270EA32C001213F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06B3F4270EA32C001213F0 /* AppDelegate.swift */; };
 		8B06B3F7270EA32C001213F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06B3F6270EA32C001213F0 /* SceneDelegate.swift */; };
 		8B06B3F9270EA32C001213F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06B3F8270EA32C001213F0 /* ViewController.swift */; };
 		8B06B3FC270EA32C001213F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B06B3FA270EA32C001213F0 /* Main.storyboard */; };
 		8B06B3FE270EA32F001213F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B06B3FD270EA32F001213F0 /* Assets.xcassets */; };
 		8B06B401270EA32F001213F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B06B3FF270EA32F001213F0 /* LaunchScreen.storyboard */; };
+		8B06B409270EA4AC001213F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B06B408270EA4AC001213F0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AEF5E986497E3BD97C3234F /* Pods-WarningApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarningApp.release.xcconfig"; path = "Target Support Files/Pods-WarningApp/Pods-WarningApp.release.xcconfig"; sourceTree = "<group>"; };
 		8B06B3F1270EA32C001213F0 /* WarningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B06B3F4270EA32C001213F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B06B3F6270EA32C001213F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		8B06B3FD270EA32F001213F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B06B400270EA32F001213F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B06B402270EA32F001213F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B06B408270EA4AC001213F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9E20588B66055C95FACDBE98 /* Pods_WarningApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WarningApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26E06B3F62B290941A8DE42 /* Pods-WarningApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WarningApp.debug.xcconfig"; path = "Target Support Files/Pods-WarningApp/Pods-WarningApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F97BC5FFD834AD75EC7CF38 /* Pods_WarningApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1380670F056A5FBEB20C945F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D26E06B3F62B290941A8DE42 /* Pods-WarningApp.debug.xcconfig */,
+				6AEF5E986497E3BD97C3234F /* Pods-WarningApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C012C60DCACE739B54FCB06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E20588B66055C95FACDBE98 /* Pods_WarningApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B06B3E8270EA32C001213F0 = {
 			isa = PBXGroup;
 			children = (
 				8B06B3F3270EA32C001213F0 /* WarningApp */,
 				8B06B3F2270EA32C001213F0 /* Products */,
+				1380670F056A5FBEB20C945F /* Pods */,
+				4C012C60DCACE739B54FCB06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +89,7 @@
 				8B06B3FD270EA32F001213F0 /* Assets.xcassets */,
 				8B06B3FF270EA32F001213F0 /* LaunchScreen.storyboard */,
 				8B06B402270EA32F001213F0 /* Info.plist */,
+				8B06B408270EA4AC001213F0 /* GoogleService-Info.plist */,
 			);
 			path = WarningApp;
 			sourceTree = "<group>";
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B06B405270EA32F001213F0 /* Build configuration list for PBXNativeTarget "WarningApp" */;
 			buildPhases = (
+				B9AB9C4B63EA414329099E53 /* [CP] Check Pods Manifest.lock */,
 				8B06B3ED270EA32C001213F0 /* Sources */,
 				8B06B3EE270EA32C001213F0 /* Frameworks */,
 				8B06B3EF270EA32C001213F0 /* Resources */,
+				0A16B9E1D5677784BA4E24AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B06B401270EA32F001213F0 /* LaunchScreen.storyboard in Resources */,
+				8B06B409270EA4AC001213F0 /* GoogleService-Info.plist in Resources */,
 				8B06B3FE270EA32F001213F0 /* Assets.xcassets in Resources */,
 				8B06B3FC270EA32C001213F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A16B9E1D5677784BA4E24AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarningApp/Pods-WarningApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WarningApp/Pods-WarningApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WarningApp/Pods-WarningApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9AB9C4B63EA414329099E53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WarningApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B06B3ED270EA32C001213F0 /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		8B06B406270EA32F001213F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26E06B3F62B290941A8DE42 /* Pods-WarningApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +385,7 @@
 		};
 		8B06B407270EA32F001213F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AEF5E986497E3BD97C3234F /* Pods-WarningApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
