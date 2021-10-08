@@ -47,7 +47,7 @@
         <!--View Controller-->
         <scene sceneID="lER-ml-mPz">
             <objects>
-                <viewController id="GMk-RD-CNA" sceneMemberID="viewController">
+                <viewController id="GMk-RD-CNA" customClass="ViewController" customModule="DiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xee-lq-B9g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="JXk-nQ-HR8" id="QxH-rf-5ap"/>
+                                            <outlet property="titleLabel" destination="aUO-o2-Blc" id="RD4-4Y-Xof"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -120,6 +124,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="hLg-hI-rRb" id="sEm-Ev-xgp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLg-43-KLX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,8 +203,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="NsB-8y-MMQ">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="gUP-rS-yfP"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="gUP-rS-yfP">
+                            <connections>
+                                <action selector="confirmButtonTapped:" destination="ZsK-jD-isS" id="E1z-9u-vWk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="gUP-rS-yfP" id="ZSt-Mg-crj"/>
+                        <outlet property="contentsTextView" destination="z8R-V1-XOg" id="6ur-Ql-Ray"/>
+                        <outlet property="dateTextField" destination="Lz0-Gt-N7h" id="g82-Y2-Gyc"/>
+                        <outlet property="titleTextField" destination="Xgh-1Z-Axn" id="VOk-Tj-KbP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfp-DJ-lRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
