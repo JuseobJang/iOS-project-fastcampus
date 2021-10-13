@@ -20,6 +20,7 @@ class DiaryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+        NotificationCenter.default.addObserver(self, selector: #selector(starDiaryNotification(_:)), name: NSNotification.Name("starDiary"), object: nil)
 
     }
     
@@ -41,9 +42,19 @@ class DiaryDetailViewController: UIViewController {
         return formatter.string(from: date)
     }
     
+    @objc func starDiaryNotification(_ notification: Notification){
+        guard let starDiary = notification.object as? [String: Any] else { return }
+        guard let isStar = starDiary["isStar"] as? Bool else { return }
+        guard let uuidString = starDiary["uuidString"] as? String else { return }
+        guard let diary = self.diary else { return }
+        if diary.uuidString == uuidString {
+            self.diary?.isStar = isStar
+            self.configureView()
+        }
+    }
+    
     @objc func editDiaryNotification(_ notification: Notification){
         guard let diary = notification.object as? Diary else { return }
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
         self.diary = diary
         self.configureView()
     }
@@ -60,16 +71,15 @@ class DiaryDetailViewController: UIViewController {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        guard let indexPath = self.indexPath else { return }
+        guard let uuidString = self.diary?.uuidString else { return }
         self.navigationController?.popViewController(animated: true)
         NotificationCenter.default.post(name: NSNotification.Name("deleteDiary"),
-                                        object: indexPath )
+                                        object: uuidString )
         
     }
     
     @objc func starButtonTapped(){
         guard let isStar = self.diary?.isStar else { return }
-        guard let indexPath = self.indexPath else { return }
         
         if isStar {
             self.starButton?.image = UIImage(systemName: "star")
@@ -81,7 +91,7 @@ class DiaryDetailViewController: UIViewController {
                                         object: [
                                             "diary" : self.diary,
                                             "isStar": self.diary?.isStar ?? false,
-                                            "indexPath": indexPath
+                                            "uuidString": diary?.uuidString
                                         ])
     }
     
