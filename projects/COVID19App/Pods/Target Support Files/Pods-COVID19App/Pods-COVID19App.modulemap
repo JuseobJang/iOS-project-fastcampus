@@ -1,0 +1,6 @@
+framework module Pods_COVID19App {
+  umbrella header "Pods-COVID19App-umbrella.h"
+
+  export *
+  module * { export * }
+}
