@@ -14,6 +14,7 @@
 		8B3C283C2718731800C5F6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C283A2718731800C5F6AE /* Main.storyboard */; };
 		8B3C283E2718731D00C5F6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C283D2718731D00C5F6AE /* Assets.xcassets */; };
 		8B3C28412718731D00C5F6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C283F2718731D00C5F6AE /* LaunchScreen.storyboard */; };
+		8B3C284927187EE600C5F6AE /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C284827187EE600C5F6AE /* CovidDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8B3C283D2718731D00C5F6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3C28402718731D00C5F6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3C28422718731D00C5F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3C284827187EE600C5F6AE /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
 		C21B0468AF89E6F55927F950 /* Pods-COVID19App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19App.debug.xcconfig"; path = "Target Support Files/Pods-COVID19App/Pods-COVID19App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				8B3C283D2718731D00C5F6AE /* Assets.xcassets */,
 				8B3C283F2718731D00C5F6AE /* LaunchScreen.storyboard */,
 				8B3C28422718731D00C5F6AE /* Info.plist */,
+				8B3C284827187EE600C5F6AE /* CovidDetailViewController.swift */,
 			);
 			path = COVID19App;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				C21B0468AF89E6F55927F950 /* Pods-COVID19App.debug.xcconfig */,
 				6B9B91C986D16EB338400387 /* Pods-COVID19App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3C28392718731800C5F6AE /* ViewController.swift in Sources */,
+				8B3C284927187EE600C5F6AE /* CovidDetailViewController.swift in Sources */,
 				8B3C28352718731800C5F6AE /* AppDelegate.swift in Sources */,
 				8B3C28372718731800C5F6AE /* SceneDelegate.swift in Sources */,
 			);
