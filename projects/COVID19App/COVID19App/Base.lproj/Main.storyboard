@@ -28,8 +28,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKr-Ii-CbN">
-                                                <rect key="frame" x="71" y="40.5" width="41.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKr-Ii-CbN">
+                                                <rect key="frame" x="79" y="40.5" width="25" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCq-1R-HbW">
-                                                <rect key="frame" x="71" y="40.5" width="41.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCq-1R-HbW">
+                                                <rect key="frame" x="79" y="40.5" width="25" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="g2o-Jn-pKa"/>
                     <connections>
-                        <outlet property="newCaseCell" destination="MCq-1R-HbW" id="zVg-uk-WKo"/>
+                        <outlet property="newCaseLabel" destination="MCq-1R-HbW" id="0jW-fs-Eft"/>
                         <outlet property="pieChartView" destination="XTO-NJ-gmt" id="VTZ-in-ozk"/>
                         <outlet property="totalCaseLabel" destination="CKr-Ii-CbN" id="s0m-sr-Pao"/>
                     </connections>
