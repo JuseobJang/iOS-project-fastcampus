@@ -14,6 +14,7 @@
 		8B3C281A2718152B00C5F6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C28192718152B00C5F6AE /* Assets.xcassets */; };
 		8B3C281D2718152B00C5F6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3C281B2718152B00C5F6AE /* LaunchScreen.storyboard */; };
 		8B3C28252718172F00C5F6AE /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C28242718172F00C5F6AE /* WeatherInfo.swift */; };
+		8B3C28272718250100C5F6AE /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3C28262718250100C5F6AE /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8B3C281C2718152B00C5F6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3C281E2718152B00C5F6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B3C28242718172F00C5F6AE /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		8B3C28262718250100C5F6AE /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8B3C281B2718152B00C5F6AE /* LaunchScreen.storyboard */,
 				8B3C281E2718152B00C5F6AE /* Info.plist */,
 				8B3C28242718172F00C5F6AE /* WeatherInfo.swift */,
+				8B3C28262718250100C5F6AE /* ErrorMessage.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				8B3C28252718172F00C5F6AE /* WeatherInfo.swift in Sources */,
 				8B3C28152718152700C5F6AE /* ViewController.swift in Sources */,
+				8B3C28272718250100C5F6AE /* ErrorMessage.swift in Sources */,
 				8B3C28112718152700C5F6AE /* AppDelegate.swift in Sources */,
 				8B3C28132718152700C5F6AE /* SceneDelegate.swift in Sources */,
 			);
