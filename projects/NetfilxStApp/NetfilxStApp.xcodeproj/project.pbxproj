@@ -18,6 +18,8 @@
 		8B7F48B5271A93360078F2D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F48B4271A93360078F2D8 /* HomeViewController.swift */; };
 		8B7F48B8271A95660078F2D8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B7F48B7271A95660078F2D8 /* SnapKit */; };
 		8BB7CA69271C4F06008B8CDB /* ContentCollectionViewRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7CA68271C4F06008B8CDB /* ContentCollectionViewRankCell.swift */; };
+		8BB7CA6B271C6888008B8CDB /* ContentCollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7CA6A271C6888008B8CDB /* ContentCollectionViewMainCell.swift */; };
+		8BB7CA6D271C8151008B8CDB /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB7CA6C271C8151008B8CDB /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		8B7F48AE271A92A10078F2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B7F48B4271A93360078F2D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8BB7CA68271C4F06008B8CDB /* ContentCollectionViewRankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewRankCell.swift; sourceTree = "<group>"; };
+		8BB7CA6A271C6888008B8CDB /* ContentCollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewMainCell.swift; sourceTree = "<group>"; };
+		8BB7CA6C271C8151008B8CDB /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				8B3DF85A271AA4DF002A7A2D /* ContentCollectionViewCell.swift */,
 				8B3DF85C271AA6F2002A7A2D /* ContentCollectionViewHeader.swift */,
 				8BB7CA68271C4F06008B8CDB /* ContentCollectionViewRankCell.swift */,
+				8BB7CA6A271C6888008B8CDB /* ContentCollectionViewMainCell.swift */,
+				8BB7CA6C271C8151008B8CDB /* UIButton.swift */,
 			);
 			path = NetfilxStApp;
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 				8B7F48A3271A929F0078F2D8 /* SceneDelegate.swift in Sources */,
 				8BB7CA69271C4F06008B8CDB /* ContentCollectionViewRankCell.swift in Sources */,
 				8B7F48B5271A93360078F2D8 /* HomeViewController.swift in Sources */,
+				8BB7CA6B271C6888008B8CDB /* ContentCollectionViewMainCell.swift in Sources */,
 				8B3DF857271AA1CF002A7A2D /* Content.swift in Sources */,
+				8BB7CA6D271C8151008B8CDB /* UIButton.swift in Sources */,
 				8B3DF85B271AA4DF002A7A2D /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
