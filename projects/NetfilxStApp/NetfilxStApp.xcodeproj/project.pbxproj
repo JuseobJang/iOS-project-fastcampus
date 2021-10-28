@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B2F509D2722A112003DB5DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F509C2722A112003DB5DA /* ContentView.swift */; };
+		8B2F509F2722A4B8003DB5DA /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2F509E2722A4B8003DB5DA /* ContentDetailView.swift */; };
 		8B3DF857271AA1CF002A7A2D /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DF856271AA1CE002A7A2D /* Content.swift */; };
 		8B3DF859271AA20F002A7A2D /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B3DF858271AA20F002A7A2D /* Content.plist */; };
 		8B3DF85B271AA4DF002A7A2D /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DF85A271AA4DF002A7A2D /* ContentCollectionViewCell.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B2F509C2722A112003DB5DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B2F509E2722A4B8003DB5DA /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		8B3DF856271AA1CE002A7A2D /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		8B3DF858271AA20F002A7A2D /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Content.plist; path = "../../../../../../Downloads/Part 3. Intermediate (9월30일 업데이트ver)/Ch6_NetflixStyle/Content.plist"; sourceTree = "<group>"; };
 		8B3DF85A271AA4DF002A7A2D /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				8BB7CA68271C4F06008B8CDB /* ContentCollectionViewRankCell.swift */,
 				8BB7CA6A271C6888008B8CDB /* ContentCollectionViewMainCell.swift */,
 				8BB7CA6C271C8151008B8CDB /* UIButton.swift */,
+				8B2F509C2722A112003DB5DA /* ContentView.swift */,
+				8B2F509E2722A4B8003DB5DA /* ContentDetailView.swift */,
 			);
 			path = NetfilxStApp;
 			sourceTree = "<group>";
@@ -165,11 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7F48A1271A929F0078F2D8 /* AppDelegate.swift in Sources */,
+				8B2F509F2722A4B8003DB5DA /* ContentDetailView.swift in Sources */,
 				8B3DF85D271AA6F2002A7A2D /* ContentCollectionViewHeader.swift in Sources */,
 				8B7F48A3271A929F0078F2D8 /* SceneDelegate.swift in Sources */,
 				8BB7CA69271C4F06008B8CDB /* ContentCollectionViewRankCell.swift in Sources */,
 				8B7F48B5271A93360078F2D8 /* HomeViewController.swift in Sources */,
 				8BB7CA6B271C6888008B8CDB /* ContentCollectionViewMainCell.swift in Sources */,
+				8B2F509D2722A112003DB5DA /* ContentView.swift in Sources */,
 				8B3DF857271AA1CF002A7A2D /* Content.swift in Sources */,
 				8BB7CA6D271C8151008B8CDB /* UIButton.swift in Sources */,
 				8B3DF85B271AA4DF002A7A2D /* ContentCollectionViewCell.swift in Sources */,
