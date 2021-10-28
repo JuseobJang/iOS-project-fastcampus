@@ -16,6 +16,11 @@
 		8BD2476D272A848B00F01791 /* AssetMenuStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2476C272A848B00F01791 /* AssetMenuStyle.swift */; };
 		8BD2476F272A873F00F01791 /* AssetMenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2476E272A873F00F01791 /* AssetMenuGridView.swift */; };
 		8BD24771272A8BED00F01791 /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD24770272A8BED00F01791 /* AssetView.swift */; };
+		8BD24773272A8E5400F01791 /* AssetBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD24772272A8E5400F01791 /* AssetBanner.swift */; };
+		8BD24775272A8E8C00F01791 /* BannerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD24774272A8E8C00F01791 /* BannerCard.swift */; };
+		8BD24777272A8F9F00F01791 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD24776272A8F9F00F01791 /* PageViewController.swift */; };
+		8BD24779272A937400F01791 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD24778272A937400F01791 /* PageControl.swift */; };
+		8BD2477B272A98D200F01791 /* AssetBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2477A272A98D200F01791 /* AssetBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		8BD2476C272A848B00F01791 /* AssetMenuStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuStyle.swift; sourceTree = "<group>"; };
 		8BD2476E272A873F00F01791 /* AssetMenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuGridView.swift; sourceTree = "<group>"; };
 		8BD24770272A8BED00F01791 /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
+		8BD24772272A8E5400F01791 /* AssetBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBanner.swift; sourceTree = "<group>"; };
+		8BD24774272A8E8C00F01791 /* BannerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCard.swift; sourceTree = "<group>"; };
+		8BD24776272A8F9F00F01791 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8BD24778272A937400F01791 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		8BD2477A272A98D200F01791 /* AssetBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,11 @@
 				8BD2476C272A848B00F01791 /* AssetMenuStyle.swift */,
 				8BD2476E272A873F00F01791 /* AssetMenuGridView.swift */,
 				8BD24770272A8BED00F01791 /* AssetView.swift */,
+				8BD24772272A8E5400F01791 /* AssetBanner.swift */,
+				8BD24774272A8E8C00F01791 /* BannerCard.swift */,
+				8BD24776272A8F9F00F01791 /* PageViewController.swift */,
+				8BD24778272A937400F01791 /* PageControl.swift */,
+				8BD2477A272A98D200F01791 /* AssetBannerView.swift */,
 			);
 			path = MyAssets;
 			sourceTree = "<group>";
@@ -153,11 +168,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD2476F272A873F00F01791 /* AssetMenuGridView.swift in Sources */,
+				8BD24777272A8F9F00F01791 /* PageViewController.swift in Sources */,
 				8BD2476D272A848B00F01791 /* AssetMenuStyle.swift in Sources */,
+				8BD24773272A8E5400F01791 /* AssetBanner.swift in Sources */,
 				8BD24771272A8BED00F01791 /* AssetView.swift in Sources */,
 				8BD24769272A7C7800F01791 /* NavigationBarWithButton.swift in Sources */,
 				8BD2475D272A76E800F01791 /* ContentView.swift in Sources */,
 				8BD2475B272A76E800F01791 /* MyAssetsApp.swift in Sources */,
+				8BD24779272A937400F01791 /* PageControl.swift in Sources */,
+				8BD2477B272A98D200F01791 /* AssetBannerView.swift in Sources */,
+				8BD24775272A8E8C00F01791 /* BannerCard.swift in Sources */,
 				8BD2476B272A829400F01791 /* AssetMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
