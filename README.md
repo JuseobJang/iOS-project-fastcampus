@@ -33,7 +33,6 @@
 - [COVID 19 App](projects/COVID19App)
 - [Spotify Login St App](projects/SpotifyLoginStApp)
 - [Credit Card List](projects/CreditCardList)
-- [Notice App](projects/NoticeApp)
 - [Drink App](projects/DrinkApp)
 - [Netflix St App](projects/NetfilxStApp)
 - [Brewery App](projects/BreweryApp)
